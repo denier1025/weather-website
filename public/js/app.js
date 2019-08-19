@@ -16,8 +16,8 @@ weatherForm.addEventListener("submit", e => {
           messageOne.textContent = data.err.msg;
         } else {
           messageOne.textContent = data.location;
-          const { summary, temperature, precipProbability } = data.forecast;
-          messageTwo.textContent = `${summary} It's currently ${temperature} degress out. There is a ${precipProbability}% chance of rain.`;
+          const { summary, temperatureHigh, temperatureLow, temperature, precipProbability } = data.forecast;
+          messageTwo.textContent = `${summary} It's currently ${temperature} degress out. This high today is ${temperatureHigh} with a low of ${temperatureLow}. There is a ${precipProbability}% chance of rain.`;
         }
       });
     }
